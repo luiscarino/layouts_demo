@@ -36,7 +36,7 @@ class _HomeWidgetState extends State<HomeWidget> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.title),
+        title: Text(_getWidgetTitle(_selectedDrawerIndex)),
       ),
       drawer: Drawer(
         child: ListView(
@@ -59,6 +59,22 @@ class _HomeWidgetState extends State<HomeWidget> {
         return new StackViewWidget();
       case 3:
         return new CardViewWidget();
+
+      default:
+        return new Text("Error");
+    }
+  }
+
+  _getWidgetTitle(int pos) {
+    switch (pos) {
+      case 0:
+        return "Grid View";
+      case 1:
+        return "List View";
+      case 2:
+        return "Stack";
+      case 3:
+        return "Cards";
 
       default:
         return new Text("Error");
