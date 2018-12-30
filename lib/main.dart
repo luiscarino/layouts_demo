@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:layouts_demo/cards_widget_example.dart';
 import 'package:layouts_demo/grid_view_widget_example.dart';
 import 'package:layouts_demo/list_view_widget_example.dart';
 import 'package:layouts_demo/stack_widget_example.dart';
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: StackViewWidget(),
+      home: CardViewWidget(),
     );
   }
 }
