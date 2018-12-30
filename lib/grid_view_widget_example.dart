@@ -13,9 +13,6 @@ class _GridViewWidgetState extends State<GridViewWidget> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("Grid View"),
-      ),
       body: Center(
           child: buildGrid()
       ),

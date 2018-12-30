@@ -9,12 +9,7 @@ class _StackViewWidgetState extends State<StackViewWidget> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("Stack"),
-      ),
-      body: Center(
-
-          child: stack),
+      body: Center(child: stack),
     );
   }
 }

@@ -9,9 +9,6 @@ class _ListViewWidgetState extends State<ListViewWidget> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("List View"),
-      ),
       body: Center(child: ListView(children: _buildListViewTileList(20))),
     );
   }

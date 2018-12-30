@@ -9,9 +9,6 @@ class _CardViewWidgetState extends State<CardViewWidget> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("Card View"),
-      ),
       body: card,
     );
   }
