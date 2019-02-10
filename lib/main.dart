@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:layouts_demo/cards_widget_example.dart';
 import 'package:layouts_demo/grid_view_widget_example.dart';
 import 'package:layouts_demo/list_view_widget_example.dart';
+import 'package:layouts_demo/row_column.dart';
 import 'package:layouts_demo/stack_widget_example.dart';
 
 void main() => runApp(MyApp());
@@ -59,7 +60,8 @@ class _HomeWidgetState extends State<HomeWidget> {
         return new StackViewWidget();
       case 3:
         return new CardViewWidget();
-
+      case 4:
+        return new RowColumnWidget();
       default:
         return new Text("Error");
     }
@@ -75,7 +77,8 @@ class _HomeWidgetState extends State<HomeWidget> {
         return "Stack";
       case 3:
         return "Cards";
-
+      case 4:
+        return "Column/Row";
       default:
         return new Text("Error");
     }
@@ -89,7 +92,7 @@ class _HomeWidgetState extends State<HomeWidget> {
   List<Widget> _getDrawerChildren() {
     return <Widget>[
       DrawerHeader(
-        child: Text('Layouts'),
+        child: Text('Flutter widgets', style: TextStyle(fontSize: 18.0, color: Colors.white)),
         decoration: BoxDecoration(
           color: Colors.blue,
         ),
@@ -119,6 +122,13 @@ class _HomeWidgetState extends State<HomeWidget> {
         title: Text('Cards'),
         onTap: () {
           _onSelectItem(3);
+        },
+      ),
+      Divider(),
+      ListTile(
+        title: Text('Row/Column'),
+        onTap: () {
+          _onSelectItem(4);
         },
       ),
     ];
